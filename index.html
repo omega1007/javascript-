@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>javascript 原生 应用</title>
+
+</head>
+<body>
+<a href="javascript:;" onclick="show()">
+	<div class="t1">ttt</div>
+	<div class="t2" id="t2">aa</div>
+</a>
+ 
+<script>
+//点击一个元素，获取这个元素下的子素对象相关属性
+
+
+function show(){
+//alert("dd");
+console.log(event);//获得点击元素的对象
+
+var that = event.currentTarget;//点击对象的元素内容
+
+console.log(that);
+
+console.log(that.querySelectorAll('div'));//点击对象的指定元素的NodeList列表（这里是所有div元素的对象）
+
+var t2Cont = that.getElementsByClassName("t2")[0].innerHTML;//点击对象的指定元素的html值或是文本值（innerText）
+console.log(t2Cont);
+console.log(that.children);//点击对象的 所有子元素对象
+
+}
+</script>
+</body>
+</html>        
+      
